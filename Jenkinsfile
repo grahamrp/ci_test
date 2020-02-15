@@ -14,7 +14,7 @@ pipeline {
 
     stage('check') {
       steps {
-        sh 'R CMD check *tar.gz'
+        sh 'R CMD check --no-manual *tar.gz'
       }
     }
 
