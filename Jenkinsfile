@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'rocker/r-ver'
+      image 'rocker/tidyverse'
     }
 
   }
