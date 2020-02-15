@@ -12,5 +12,11 @@ pipeline {
       }
     }
 
+    stage('check') {
+      steps {
+        sh 'R CMD check *tar.gz'
+      }
+    }
+
   }
 }
