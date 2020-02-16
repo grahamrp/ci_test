@@ -18,6 +18,12 @@ pipeline {
         sh 'R CMD check --no-manual *tar.gz'
       }
     }
+    
+    stage('build-docker') {
+      steps {
+        sh 'docker image build -t app:0.1 .'
+      }
+    }
 
   }
 
