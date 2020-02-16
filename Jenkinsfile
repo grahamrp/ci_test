@@ -21,7 +21,9 @@ pipeline {
     
     stage('build-docker') {
       steps {
-        sh 'docker image build -t app:0.1 .'
+        script {
+          docker.build app:1.0
+        }
       }
     }
 
