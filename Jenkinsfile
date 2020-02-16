@@ -20,4 +20,11 @@ pipeline {
     }
 
   }
+
+  post {
+        always {
+            archiveArtifacts artifacts: 'hello.Rcheck/tests/junit_result.xml', fingerprint: true
+            junit 'hello.Rcheck/tests/junit_result.xml'
+        }
+  }
 }
