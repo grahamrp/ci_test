@@ -22,7 +22,7 @@ pipeline {
     stage('build-docker') {
       steps {
         script {
-          docker.build app:1.0
+          docker.build "app:1.0"
         }
       }
     }
